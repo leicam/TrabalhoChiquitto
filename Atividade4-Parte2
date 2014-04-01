@@ -1,0 +1,33 @@
+
+/* Verficação Parte02 */
+
+		public function Igualdade(PaisesAtividade $p1, PaisesAtividade $p2){
+			if ($p1->codigo == $p2->codigo){
+				return false;
+			}
+			return true;
+		}
+
+		public function FronteiraVerf(PaisesAtividade $p1){
+			if ($p1->Paisesvizinhos != NULL ){
+				return false;			
+			}
+			return true;
+		}
+
+
+		public function DensidadePopulacao($populacao,$dimensao){
+			$densidade = $populacao/ $dimensao;
+			return $densidade;
+		}
+
+		public function MostraPvizinhos(PaisesAtividade $p1, PaisesAtividade $p2){
+                    foreach ($p1 -> Paisesvizinhos as $key => $value) {
+                        if($p1->Paisesvizinhos[$key] == $p2->Paisesvizinhos[$key]){
+                            echo $p1->Paisesvizinhos[$key];
+                        }
+                    }
+
+		}
+
+}
